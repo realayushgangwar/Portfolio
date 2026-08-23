@@ -11,26 +11,58 @@ const projectData = [
       'A data analytics and visualization project that converts sales data into meaningful insights through an interactive dashboard. Designed to analyze key metrics and business trends.',
     tech: ['Python', 'Data Analytics', 'Data Visualization', 'SQL'],
     githubUrl: 'https://github.com/realayushgangwar/Sales_Dashboard',
+    liveUrl: 'https://sales-dashboard-seven-zeta.vercel.app',
   },
   {
-    status: 'In Development',
-    statusBadge: 'Concept / In Development',
-    isCompleted: false,
-    title: 'Computer Vision & AI Application',
+    status: 'Completed',
+    statusBadge: 'Completed Project',
+    isCompleted: true,
+    title: 'AI Voice Detector 1',
     description:
-      'An exploration into computer vision algorithms and image recognition workflows to analyze visual data and build practical real-world AI prototypes.',
-    tech: ['Python', 'Computer Vision', 'AI/ML concepts'],
-    githubUrl: 'https://github.com/realayushgangwar',
+      'An AI audio classification application featuring a Python backend and web UI to detect synthetic and deepfake voice patterns versus authentic human speech.',
+    tech: ['Python', 'Machine Learning', 'Audio Analytics', 'JavaScript', 'HTML/CSS'],
+    githubUrl: 'https://github.com/realayushgangwar/AI-Voice-Detector-1',
   },
   {
-    status: 'In Development',
-    statusBadge: 'Concept / In Development',
-    isCompleted: false,
-    title: 'ML Predictive Models',
+    status: 'Completed',
+    statusBadge: 'Completed Project',
+    isCompleted: true,
+    title: 'AI Voice Detector 2',
     description:
-      'Experimenting with Scikit-learn algorithms to train, evaluate, and compare baseline classification and regression models on structured datasets.',
-    tech: ['Python', 'Scikit-learn', 'NumPy', 'Matplotlib'],
-    githubUrl: 'https://github.com/realayushgangwar',
+      'An enhanced web application interface and feature-extraction workflow for real-time AI voice detection, audio processing, and confidence scoring.',
+    tech: ['JavaScript', 'HTML/CSS', 'Machine Learning', 'Web Audio API'],
+    githubUrl: 'https://github.com/realayushgangwar/AI-Voice-Detector-2',
+  },
+  {
+    status: 'Completed',
+    statusBadge: 'Completed Project',
+    isCompleted: true,
+    title: 'ML & Data Science Bootcamp',
+    description:
+      'Comprehensive Data Science & Machine Learning repository containing hands-on Jupyter notebooks, exploratory data analysis (EDA), and predictive modeling algorithms.',
+    tech: ['Python', 'Jupyter Notebook', 'Pandas', 'NumPy', 'Scikit-Learn'],
+    githubUrl: 'https://github.com/realayushgangwar/Bootcamp',
+  },
+  {
+    status: 'Completed',
+    statusBadge: 'Completed Project',
+    isCompleted: true,
+    title: 'AI/ML Engineering Projects',
+    description:
+      'A collection of core Python algorithms, machine learning model benchmarks, data science scripts, and practical problem-solving implementations.',
+    tech: ['Python', 'Machine Learning', 'Algorithms', 'Data Structures'],
+    githubUrl: 'https://github.com/realayushgangwar/Projects',
+  },
+  {
+    status: 'Completed',
+    statusBadge: 'Completed Project',
+    isCompleted: true,
+    title: 'Developer Portfolio Website',
+    description:
+      'A modern personal portfolio built with React, Vite, Tailwind CSS, and Framer Motion, featuring dynamic canvas particle effects and dark glassmorphic UI.',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'JavaScript'],
+    githubUrl: 'https://github.com/realayushgangwar/Portfolio',
+    liveUrl: 'https://portfolio-nexus-8f65.vercel.app',
   },
 ];
 
@@ -47,14 +79,14 @@ function Projects() {
         >
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-sky-400">// 04. Practical Work</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
-            Projects
+            Projects & Open Source Repositories
           </h2>
           <p className="mt-3 text-slate-400 leading-7">
-            Highlighting completed data analytics builds alongside ongoing machine learning concepts and research prototypes.
+            Highlighting my open-source projects, machine learning models, data analytics dashboards, and web applications from GitHub.
           </p>
         </motion.div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projectData.map((project, index) => (
             <motion.div
               key={project.title}
@@ -110,18 +142,30 @@ function Projects() {
                 </div>
               </div>
 
-              <div className="mt-6 border-t border-slate-800/80 pt-4">
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-slate-800/80 pt-4">
                 <motion.a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noreferrer"
                   whileHover={{ x: 3 }}
-                  className="inline-flex items-center gap-2 text-xs font-semibold text-sky-400 transition hover:text-sky-300"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-400 transition hover:text-sky-300"
                 >
                   <Github size={15} />
-                  {project.isCompleted ? 'View GitHub Repository' : 'Explore GitHub Profile'}
+                  View GitHub Repo
                   <ExternalLink size={13} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" />
                 </motion.a>
+                {project.liveUrl && (
+                  <motion.a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-400 transition hover:bg-emerald-500/20 hover:text-emerald-300"
+                  >
+                    <ExternalLink size={12} />
+                    Live Demo
+                  </motion.a>
+                )}
               </div>
             </motion.div>
           ))}
