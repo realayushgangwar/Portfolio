@@ -47,16 +47,6 @@ const projectData = [
     status: 'Completed',
     statusBadge: 'Completed Project',
     isCompleted: true,
-    title: 'AI/ML Engineering Projects',
-    description:
-      'A collection of core Python algorithms, machine learning model benchmarks, data science scripts, and practical problem-solving implementations.',
-    tech: ['Python', 'Machine Learning', 'Algorithms', 'Data Structures'],
-    githubUrl: 'https://github.com/realayushgangwar/Projects',
-  },
-  {
-    status: 'Completed',
-    statusBadge: 'Completed Project',
-    isCompleted: true,
     title: 'Developer Portfolio Website',
     description:
       'A modern personal portfolio built with React, Vite, Tailwind CSS, and Framer Motion, featuring dynamic canvas particle effects and dark glassmorphic UI.',
