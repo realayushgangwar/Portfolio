@@ -11,7 +11,7 @@ const projectData = [
       'A data analytics and visualization project that converts sales data into meaningful insights through an interactive dashboard. Designed to analyze key metrics and business trends.',
     tech: ['Python', 'Data Analytics', 'Data Visualization', 'SQL'],
     githubUrl: 'https://github.com/realayushgangwar/Sales_Dashboard',
-    liveUrl: 'https://sales-dashboard-seven-zeta.vercel.app',
+    liveUrl: 'https://sales-dashboard-1-f32l.onrender.com/',
   },
   {
     status: 'Completed',
